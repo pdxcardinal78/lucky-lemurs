@@ -1,23 +1,30 @@
 import random
+import string
 
 
-def translate(s: str) -> str:
-    """Exchanges alphabetic characters in string s and returns a copy"""
-    abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    cba = "".join(random.sample(abc, len(abc)))
-##    bob = s.maketrans(abc, cba)
-    return s.translate(s.maketrans(abc, cba))
+def quote_translate(s: str) -> str:
+    """Function quote_translate returns an encoded version of it's input
+
+    Input: s: str
+    Returns: s encoded with a random function
+    """
+    abc = string.ascii_uppercase
+    mix = "".join(random.sample(abc, len(abc)))
+    return s.translate(s.maketrans(abc, mix))
 
 
-def cquote() -> None:
-    """Function cquote is a function."""
-    f_name = "./data/quotes.txt"
+def read_quote(f_name: str) -> str:
+    """Function read_quote reads in a text file
+
+    Input: f_name - location of quote file
+    Returns random quote from file f_name
+    """
     lines = open(f_name).read().splitlines()
-    quote = random.choice(lines).upper()
-##  Translate
-    print(translate(quote))
-    print(quote)
+    return random.choice(lines).upper()
 
 
 if __name__ == "__main__":
-    cquote()
+    quote = read_quote("./data/quotes.txt")
+    encrypted = quote_translate(quote)
+    print(quote)
+    print(encrypted)
