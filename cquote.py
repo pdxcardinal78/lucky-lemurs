@@ -30,3 +30,4 @@ if __name__ == "__main__":
     print(quote)
     print(encrypted)
     term = Terminal()
+    x,y = term.width, term.height
