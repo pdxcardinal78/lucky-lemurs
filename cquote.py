@@ -1,5 +1,6 @@
 import random
 import string
+from blessed import Terminal
 
 
 def quote_translate(s: str) -> str:
@@ -28,3 +29,5 @@ if __name__ == "__main__":
     encrypted = quote_translate(quote)
     print(quote)
     print(encrypted)
+    term = Terminal()
+    x,y = term.width, term.height
