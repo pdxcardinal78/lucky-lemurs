@@ -27,15 +27,15 @@ def print_line(x: int, y: int, line: str) -> None:
 def deal_with_misses(misses: int) -> int:
     """Deal with misses"""
     miss = [
-        ".....│..............",
-        ".....│....O.........",
-        ".....│....|.........",
-        ".....│....|.........",
-        ".....│.../..........",
-        ".....│.../|.........",
-        ".....│.../|\........", # noqa: CODE
-        ".....│.../.\........", # noqa: CODE
-        ".....│...\|/........" # noqa: CODE
+        "     │              ",
+        "     │    O         ",
+        "     │    |         ",
+        "     │    |         ",
+        "     │   /          ",
+        "     │   /|         ",
+        "     │   /|\        ", # noqa: CODE
+        "     │   / \        ", # noqa: CODE
+        "     │   \|/        " # noqa: CODE
     ]
     if misses == 1:
         print_line(0, 1, miss[misses])
@@ -56,14 +56,14 @@ def deal_with_misses(misses: int) -> int:
 def erect_gallows() -> int:
     """Erect Gallows"""
     gallows = [
-        ".....┌────┐.........",
-        ".....│..............",
-        ".....│..............",
-        ".....│..............",
-        ".....│..............",
-        "...┌─┴─────────┐....",
-        "...│...........└──┐.",
-        "...└──────────────┘."
+        "     ┌────┐         ",
+        "     │              ",
+        "     │              ",
+        "     │              ",
+        "     │              ",
+        "   ┌─┴─────────┐    ",
+        "   │           └──┐ ",
+        "   └──────────────┘ "
     ]
     height = len(gallows)
     for i in range(height):
@@ -115,9 +115,9 @@ def main() -> None:
             print_line(0, 10, f"Sorry, the word is {word}!")
             for i in range(2):
                 time.sleep(.25)
-                print_line(0, 2, ".....│...\|/........") # noqa: CODE
+                print_line(0, 2, "     │   \|/        ") # noqa: CODE
                 time.sleep(.25)
-                print_line(0, 2, ".....│.../|\........") # noqa: CODE
+                print_line(0, 2, "     │   /|\        ") # noqa: CODE
 
             break
     print_line(0, 11, "")
