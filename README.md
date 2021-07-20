@@ -6,14 +6,14 @@ Here is a quick rundown of what each file in this repository contains:
 - ./data/wordlist.txt: List of words used for gameplay.
 
 #### installation instructions:
-clone the repo to your local drive
+Clone the repo or download hangman.py and the /data subdirectory
 
 #### imported packages:
 - blessed: available from pip.
 
 #### Python Version
 - Python 3.9
-- 
+ 
 ## Final words
 
 Have fun! We certainly did!
